@@ -60,7 +60,7 @@ class TelegramBot:
 def main():
     """Main function to start the bot."""
     # Get bot token from environment variable
-    bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
+    bot_token = os.getenv('8169042800:AAFA5lD2EnP_tOkot3CNEXsahgNFXGwS_sc')
     
     if not bot_token:
         logger.error("TELEGRAM_BOT_TOKEN environment variable not found!")
@@ -69,7 +69,7 @@ def main():
         return
     
     # Get mini app URL from environment variable (optional)
-    mini_app_url = os.getenv('MINI_APP_URL')
+    mini_app_url = os.getenv('https://earnonchain.github.io/Tonconnect-/')
     
     # Create and run the bot
     bot = TelegramBot(bot_token, mini_app_url)
