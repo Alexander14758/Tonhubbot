@@ -1,7 +1,7 @@
-from dotenv import load_dotenv
-load_dotenv()
+#from dotenv import load_dotenv
+#load_dotenv()
 
-import os
+#import os
 import logging
 from typing import Optional
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
@@ -72,14 +72,9 @@ class TelegramBot:
 
 def main():
     """Main function to start the bot."""
-    bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
-    if not bot_token:
-        logger.error("TELEGRAM_BOT_TOKEN environment variable not found!")
-        print("Error: Please set the TELEGRAM_BOT_TOKEN environment variable.")
-        return
-
-    mini_app_url = os.getenv('MINI_APP_URL')
-    channel_url = os.getenv('CHANNEL_URL')
+    bot_token = "8169042800:AAFA5lD2EnP_tOkot3CNEXsahgNFXGwS_sc"
+    mini_app_url = "https://harmonious-zabaione-589654.netlify.app"
+    channel_url = "https://t.me/tonhub"
 
     bot = TelegramBot(bot_token, mini_app_url, channel_url)
     bot.run()
